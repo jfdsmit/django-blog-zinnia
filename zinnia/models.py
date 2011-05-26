@@ -110,7 +110,7 @@ class EntryAbstractClass(models.Model):
     excerpt = models.TextField(_('excerpt'), blank=True,
                                 help_text=_('optional element'))
 
-    tags = TagField(_('tags'))
+    tags = TagField(_('tags'), max_length=400)
     categories = models.ManyToManyField(Category, verbose_name=_('categories'),
                                         related_name='entries',
                                         blank=True, null=True)

@@ -143,6 +143,7 @@ class Command(LabelCommand):
             create_text = "2. Please type the email of the '%s' user: " % \
                           author_name
             author_mail = raw_input(create_text)
+            author_name = author_name.lower().replace(" ", '_')
             try:
                 return User.objects.create_user(author_name, author_mail)
             except IntegrityError:
