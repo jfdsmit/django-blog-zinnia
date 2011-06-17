@@ -38,7 +38,7 @@ class EntryAdmin(admin.ModelAdmin):
                                                'pingback_enabled')}),
                  (_('Publication'), {'fields': ('categories', 'tags',
                                                 'sites', 'slug')}))
-    list_filter = ('categories', 'authors', 'status', 'featured',
+    list_filter = ('categories', 'status', 'featured',
                    'login_required', 'comment_enabled', 'pingback_enabled',
                    'creation_date', 'start_publication',
                    'end_publication', 'sites')
